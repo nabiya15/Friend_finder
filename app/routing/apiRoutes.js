@@ -14,22 +14,22 @@ module.exports = function(app){
 		};
 		var currentUser=request.body;
 		var userScore =currentUser.scores;
-		console.log("currentUser: "+ currentUser.name + "  "+ Math.abs(parseInt(userScore))+"\n");
+		//console.log("currentUser: "+ currentUser.name + "  "+ Math.abs(parseInt(userScore))+"\n");
 
 		for(var i = 0; i < friends.length;i++){
 			var currentFriend = friends[i];
 			var difference = 0;
-			for (var j = 0; j<currentFriend.scores.length; j++){
-			var currentFriendScore= currentFriend.scores[j];
-			var currentUserScore= userScore[j];
+				for (var j = 0; j<currentFriend.scores.length; j++){
+				var currentFriendScore= currentFriend.scores[j];
+				var currentUserScore= userScore[j];
 
-			difference += Math.abs(parseInt(currentUserScore)-parseInt(currentFriendScore));
-			console.log("Current Friend: "+ currentFriend.name);
-			console.log("Friend Score: "+ currentFriendScore);
-			console.log("Current User score:"+ currentUserScore);
-			console.log("Total difference: "+difference);
-			console.log("\n");
-		}
+				difference += Math.abs(parseInt(currentUserScore)-parseInt(currentFriendScore));
+				/*console.log("Current Friend: "+ currentFriend.name);
+				console.log("Friend Score: "+ currentFriendScore);
+				console.log("Current User score:"+ currentUserScore);
+				console.log("Total difference: "+difference);
+				console.log("\n");*/
+			}
 		
 		
 		if(difference <= userMatch.scoreDifference){
@@ -40,7 +40,7 @@ module.exports = function(app){
 		}
 		friends.push(request.body);
 		response.json(userMatch);
-		console.log(userMatch);
-		console.log(difference);
+		//console.log(userMatch);
+		//console.log(difference);
 	})
 };

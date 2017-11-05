@@ -29,11 +29,11 @@
 			<label for="1">1. How do you describe yourself?</label>
 			<select class="form-control" id="1">
 				<option hidden="" value="0" value="0">Select an option</option>
-				<option value="1">1.Extremely Introvert</option>
-				<option value="2">2.I am an Introvert, but sometimes like to try new stuff</option>
-				<option value="3">3.I'm balanced</option>
-				<option value="4">4.Extrovert</option>
-				<option value="5">5.I'm crazy when it comes to trying new things)</option>
+				<option value="1">1. Extremely Introvert</option>
+				<option value="2">2. I am an Introvert, but sometimes like to try new stuff</option>
+				<option value="3">3. I'm balanced</option>
+				<option value="4">4. Extrovert</option>
+				<option value="5">5. I'm crazy when it comes to trying new things)</option>
 			</select><br>
 			<label for="2">2. Do you look at educational background and class of the person while making friends?</label>
 			<select class="form-control" id="2">
@@ -95,7 +95,7 @@
 				<option value="1">1. Stop calling them</option>
 				<option value="2">2. Let it go</option>
 				<option value="3">3. Tell them you are not happy with them</option>
-				<option value="4">4</option>
+				<option value="4">4. Punish them!! </option>
 				<option value="5">5. Ask them to explain why they did it</option>
 			</select><br>
 			<label for="9">9.One of your friends hasn’t called you for a couple of months. You:</label>
@@ -177,6 +177,20 @@
 						$("#10").val()
 						]
 					};
+
+						$("#name").val("");
+						$("#pic").val("");
+						$("#1").val("0");
+						$("#2").val("0");
+						$("#3").val("0");
+						$("#4").val("0");
+						$("#5").val("0");
+						$("#6").val("0");
+						$("#7").val("0");
+						$("#8").val("0");
+						$("#9").val("0");
+						$("#10").val("0");
+
 
 					$.post("/api/friends", currentUser, function(results){
 
